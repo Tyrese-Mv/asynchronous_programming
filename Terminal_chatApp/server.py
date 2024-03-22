@@ -6,11 +6,14 @@ connected_clients = set()
 async def echo(websocket, path):
     connected_clients.add(websocket)  # Add the current client to the set of connected clients
     print(connected_clients)
+    
     try:
         async for message in websocket:
             # Send the received message to all other connected clients
+            
             for client in connected_clients:
                 if client != websocket:
+                    print("message sent: {}".format(message))
                     await client.send(message)
     except websockets.exceptions.ConnectionClosedError as e:
         print("Connection closed for {}: {}".format(websocket.remote_address, e))
