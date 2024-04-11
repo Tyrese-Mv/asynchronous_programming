@@ -1,13 +1,29 @@
-# Asynchronous Programming in Python
+# WebSockets in Python
 
-This repository contains my practice projects for asynchronous programming in Python using asyncio and websockets.
+This repository contains a simple example of using WebSockets in Python for real-time communication between a server and clients.
 
-## Table of Contents
+## Installation
 
-- [Introduction](#introduction)
+To run the code in this repository, you'll need Python 3.x installed on your system. You can install the required dependencies using pip:
 
-## Introduction
+```
+pip install websockets
+```
 
-Asynchronous programming allows you to write concurrent code that can handle multiple tasks concurrently without blocking. Python's asyncio library provides tools for writing asynchronous code using coroutines, event loops, and tasks.
+## Usage
 
-This repository demonstrates how to use asyncio and websockets to create a simple chat application where multiple clients can communicate with each other in real-time.
+### Server
+
+To run the WebSocket server, navigate to the `server` directory and run the following command:
+
+```
+python server.py
+```
+
+
+This will start the WebSocket server on `localhost:8765`.
+
+### Client
+
+To run the WebSocket client, navigate to the `client` directory and run the following command:
+
