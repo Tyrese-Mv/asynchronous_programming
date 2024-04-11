@@ -6,7 +6,7 @@ online_users = set()
 message_queue = Queue()
 
 def hello(name):
-    uri = "ws://192.168.137.1:8765" # This is my personal IP address that's acting like a host
+    uri = "ws://13.48.78.188:8765" # This is my personal IP address that's acting like a host
     connection = True
     ws = websocket.WebSocket()
     ws.connect(uri)
